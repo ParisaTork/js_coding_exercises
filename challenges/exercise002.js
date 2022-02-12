@@ -1,26 +1,30 @@
 function getFillings(sandwich) {
-  if (sandwich === undefined) throw new Error("ingredients is required");
-  // Your code here!
+  if (sandwich === undefined) throw new Error('ingredients is required');
+  return sandwich.fillings;
 }
 
 function isFromManchester(person) {
-  if (person === undefined) throw new Error("person is required");
-  // Your code here!
+  if (person === undefined) throw new Error('person is required');
+  return (person.city === 'Manchester'? true : false);
 }
 
+// need to refactor
 function getBusNumbers(people) {
-  if (people === undefined) throw new Error("people is required");
-  // Your code here!
+  if (people === undefined) throw new Error('people is required');
+  const numberOfBusesRequired = people / 40;
+  return Math.ceil(numberOfBusesRequired);
 }
 
 function countSheep(arr) {
-  if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
+  if (arr === undefined) throw new Error('arr is required');
+  return arr.filter((animal) => animal === 'sheep').length;
 }
 
+// need to refactor
 function hasMPostCode(person) {
-  if (person === undefined) throw new Error("person is required");
-  // Your code here!
+  if (person === undefined) throw new Error('person is required');
+  let [firstLetterOfPostCode, secondLetterOfPostCode] = [person.address.postCode[0], person.address.postCode[1]];
+  return (firstLetterOfPostCode === 'M' && !isNaN(secondLetterOfPostCode) ? true : false);
 }
 
 module.exports = {
@@ -28,5 +32,5 @@ module.exports = {
   isFromManchester,
   countSheep,
   getBusNumbers,
-  hasMPostCode
+  hasMPostCode,
 };
