@@ -5,10 +5,9 @@ function getFillings(sandwich) {
 
 function isFromManchester(person) {
   if (person === undefined) throw new Error('person is required');
-  return (person.city === 'Manchester'? true : false);
+  return person.city === 'Manchester';
 }
 
-// need to refactor
 function getBusNumbers(people) {
   if (people === undefined) throw new Error('people is required');
   const numberOfBusesRequired = people / 40;
@@ -20,11 +19,10 @@ function countSheep(arr) {
   return arr.filter((animal) => animal === 'sheep').length;
 }
 
-// need to refactor
 function hasMPostCode(person) {
   if (person === undefined) throw new Error('person is required');
   let [firstLetterOfPostCode, secondLetterOfPostCode] = [person.address.postCode[0], person.address.postCode[1]];
-  return (firstLetterOfPostCode === 'M' && !isNaN(secondLetterOfPostCode) ? true : false);
+  return (firstLetterOfPostCode === 'M' && !isNaN(secondLetterOfPostCode));
 }
 
 module.exports = {
