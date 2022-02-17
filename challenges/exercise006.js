@@ -7,9 +7,7 @@
  */
  const sumMultiples = (arr) => {
   if (arr === undefined) throw new Error('arr is required');
-  let sum = 0;
-  arr.map((num) => (num % 5 === 0 || num % 3 === 0) ? sum += num : sum);
-  return sum;
+  return arr.filter((num) => (num % 5 === 0 || num % 3 === 0)).reduce((a, b) => a + b);
 };
 
 /**
