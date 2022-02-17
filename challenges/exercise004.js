@@ -29,10 +29,12 @@ function getCities(users) {
   return cities;
 }
 
+// had to change this back to the original to pass the tests
 function getSquareRoots(nums) {
   if (!nums) throw new Error('nums is required');
-  const squareRoots = nums.map((num) => Math.sqrt(num).toFixed(2));
-  return squareRoots;
+  const squareRoots = nums.map((num) => Math.sqrt(num));
+  const roundedSquareRoots = squareRoots.map((num) => +num.toFixed(2));
+  return roundedSquareRoots;
 }
 
 function findSentencesContaining(sentences, str) {
