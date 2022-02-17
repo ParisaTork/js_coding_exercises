@@ -4,7 +4,6 @@ const findNextNumber = (nums, n) => {
   return nums[nums.length - 1] === n || nums.includes(n) === false ? null : nums[nums.findIndex((elem) => elem === n) + 1];
 };
 
-// need to refactor
 const count1sand0s = (str) => {
   if (str === undefined) throw new Error('str is required');
   let sum = 0;
