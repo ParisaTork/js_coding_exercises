@@ -19,7 +19,6 @@ function getIntegers(nums) {
   return nums.filter((num) => Number.isInteger(num));
 }
 
-// need to refactor
 function getCities(users) {
   if (!users) throw new Error('users is required');
   const cities = [];

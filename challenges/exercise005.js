@@ -19,7 +19,6 @@ const reverseNumber = (n) => {
   return String(n).split('').reverse().join('') * 1;
 };
 
-// need to refactor
 const sumArrays = (arrs) => {
   if (arrs === undefined) throw new Error('arrs is required');
   let sum = 0;
@@ -29,7 +28,6 @@ const sumArrays = (arrs) => {
   return sum;
 };
 
-// need to refactor
 const arrShift = (arr) => {
   if (arr === undefined) throw new Error('arr is required');
   if (arr.length < 2) {
@@ -47,7 +45,6 @@ const findNeedle = (haystack, searchTerm) => {
   return JSON.stringify(haystack).toLowerCase().includes(searchTerm.toLowerCase())? true : false;
 };
 
-// need to refactor
 const getWordFrequencies = (str) => {
   if (str === undefined) throw new Error('str is required');
   const [wordFrequencies, listOfWords] = [{}, str.toLowerCase().split(' ')];
